@@ -1,0 +1,28 @@
+syntax = "proto3";
+import "google/protobuf/empty.proto";
+
+option csharp_namespace = "DispatchingSystem_Client";
+
+package Sample;
+
+service SampleController
+{
+    rpc RefreshSampleInformation(RefreshSampleInformationRequest) returns (google.protobuf.Empty);
+}
+
+message RefreshSampleInformationRequest{
+    repeated SampleInformation sampleInfo = 1;
+}
+
+message SampleInformation
+{
+    uint32 ID = 1;
+    uint32 Project_ID = 2;
+    uint32 Task_ID = 3;
+    EnumSampleStatus Status = 4;
+    enum  EnumSampleStatus {
+        IDLE = 0;
+        PROCESSING = 1;
+        FAIL = 2 ;
+    };
+}
