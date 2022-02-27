@@ -1,7 +1,7 @@
 ﻿using System;
+using System.Net;
 using CommunicateProvider;
 using SampleService;
-using SampleService.ExtensionMethod;
 
 namespace DispatchingSystem_Client
 {

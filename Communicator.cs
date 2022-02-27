@@ -73,7 +73,7 @@ namespace CommunicateProvider
 
             // call rpc
             RefreshSampleInformationRequest req = new RefreshSampleInformationRequest();
-            req.SampleInfo.AddRange(sampleInfos);
+            req.SampleInfos.AddRange(sampleInfos);
 
             var res = await client.RefreshSampleInformationAsync(req);
 
